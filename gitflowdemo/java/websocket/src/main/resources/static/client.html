@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<title>websocket</title>
+	<script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdn.bootcss.com/sockjs-client/1.1.1/sockjs.min.js"></script>
+
+<script type="text/javascript">
+function setConnected(connected) {
+	document.getElementById('connect').disabled = connected;
+	document.getElementById('disconnect').disabled = !connected;
+	// document.getElementById('conversationDiv').style.visibility = connected ? 'visible'
+	// 		: 'hidden';
+	document.getElementById('ret').innerHTML = '';
+}
+function connect() {
+	var socket = new SockJS('http://localhost:8080/hello');
+	stompClient = Stomp.over(socket);
+    stompClient.heartbeat.outgoing = 20000;  // client will send heartbeats every 20000ms
+    stompClient.heartbeat.incoming = 0;      // client does not want to receive heartbeats from the server
+    var connect_callback = function(frame) {
+        // called back after the client is connected and authenticated to the STOMP server
+        setConnected(true);
+    	stompClient.send("/app/hello", {}, JSON.stringify({'name':"world"}));
+        console.log('Connected: ' + frame);
+        stompClient.subscribe('/topic/chebaba', function(
+            msg) {
+            var back = JSON.parse(JSON.parse(msg.body).responseMsg);
+            var p = document.createElement('p');
+            var response = document.getElementById('ret');
+            p.style.wordWrap = 'break-word';
+            p.appendChild(document.createTextNode(back.msg));
+            response.appendChild(p);
+
+            //$("#ret").text(back.msg);
+            //alert(back.msg);
+        });
+
+        // stompClient.subscribe('/user/' + userId + '/msg', function(
+        // 		msg) {
+        // 	//showGreeting(JSON.parse(greeting.body).content);
+        // 	notifyBox('Test',
+        // 			'https://www.chebaba.com/favicon.ico',
+        // 			JSON.parse(msg.body).responseMsg,
+        // 			'https://www.chebaba.com');
+        // });
+    };
+    var error_callback = function(error) {
+        // display the error's message header:
+        sleep(5000); //褰撳墠鏂规硶鏆傚仠5绉�
+        connect();//閲嶆柊杩炴帴
+        // alert(error);
+
+    };
+	stompClient.connect({},connect_callback,error_callback);
+}
+
+function disconnect() {
+	if (stompClient != null) {
+		stompClient.disconnect();
+	}
+	setConnected(false);
+	console.log("Disconnected");
+}
+</script>
+</head>
+<body> 
+
+
+<div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+
+<span id ="ret">1</span>
+
+</body>
+</html>

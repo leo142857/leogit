@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1533173605375_0" label="Java Main Sources" name="main">
+<item elementID="=springboot-configuration/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-elasticsearch/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-elasticsearch/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-mutil-datasource/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-mutil-datasource/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=spring-data-elasticsearch-query/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=spring-data-elasticsearch-query/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-freemarker/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-freemarker/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-webflux-1-quickstart/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-webflux-1-quickstart/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-3-spring-boot-web/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-3-spring-boot-web/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-4-spring-boot-web-thymeleaf/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-4-spring-boot-web-thymeleaf/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-5-spring-boot-data-jpa/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-5-spring-boot-data-jpa/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-6-spring-boot-cache-redis/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-6-spring-boot-cache-redis/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=spring-data-elasticsearch-crud/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=spring-data-elasticsearch-crud/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-helloworld/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-annotation/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-annotation/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-redis/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-redis/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-redis-annotation/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-mybatis-redis-annotation/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-restful/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-restful/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-webflux-2-restful/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-webflux-2-restful/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-dubbo-client/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-dubbo-client/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-dubbo-server/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-dubbo-server/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-properties/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-properties/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-validation-over-json/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1533173605407_1" label="Java Test Sources" name="test">
+<item elementID="=springboot-configuration/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-3-spring-boot-web/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-4-spring-boot-web-thymeleaf/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-5-spring-boot-data-jpa/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=chapter-6-spring-boot-cache-redis/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-helloworld/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-properties/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springboot-validation-over-json/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1533173823463_3" label="springboot" name="springboot">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-helloworld" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-data-elasticsearch-crud" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-elasticsearch" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-4-spring-boot-web-thymeleaf" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-6-spring-boot-cache-redis" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-validation-over-json" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-dubbo-client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-2-spring-boot-config" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-5-spring-boot-data-jpa" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-properties" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-mybatis" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-learning-example" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-restful" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-3-spring-boot-web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-mybatis-mutil-datasource" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-freemarker" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-mybatis-redis-annotation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-4-spring-boot-validating-form-input" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-5-spring-boot-paging-sorting" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-mybatis-redis" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-dubbo-server" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-data-elasticsearch-query" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-webflux-2-restful" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-webflux-1-quickstart" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-mybatis-annotation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/springboot-configuration" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/chapter-1-spring-boot-quickstart" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1533173613252_2" label="Window Working Set" name="Aggregate for window 1533173613252"/>
+</workingSetManager>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdn.bootcss.com/sockjs-client/1.1.1/sockjs.min.js"></script>
+     <script type="text/javascript">
+
+		document.addEventListener('DOMContentLoaded', function() {
+			// request permission on page load
+			if (Notification.permission !== "granted")
+				Notification.requestPermission();
+		});
+
+		/**
+			The public notify function
+		 */
+		function notifyBox(title, icon, body, url) {
+			if (!Notification) {
+				alert('Desktop notifications not available in your browser. Try Chromium.');
+				return;
+			}
+			if (Notification.permission !== "granted")
+				Notification.requestPermission();
+			else {
+				var notification = new Notification(title, {
+					icon : icon,
+					body : body,
+				});
+
+				notification.onclick = function() {
+					window.open(url);
+				};
+			}
+		}
+
+		var stompClient = null;
+
+		var userId = 'abc';
+		
+		var isConnected = false;
+		
+		var headers = {
+				  login: 'admin',
+				  passcode: 'admin',
+				  // additional header
+				  'client-id': 'my-client-id',
+				  'host': 'my-client-id'
+				};
+		
+		function setConnected(connected) {
+			isConnected = connected
+			document.getElementById('connect').disabled = connected;
+			document.getElementById('disconnect').disabled = !connected;
+			document.getElementById('conversationDiv').style.visibility = connected ? 'visible'
+					: 'hidden';
+			document.getElementById('response').innerHTML = '';
+		}
+
+		function connect() {
+			// emulate websocke over http
+			var url = 'http://localhost:8080/hello';
+			var socket = new SockJS(url);
+			stompClient = Stomp.over(socket);
+
+			// websocket  url ws://
+			//var url = 'ws://localhost:8080/hello';
+			//stompClient = Stomp.client(url);
+
+			stompClient.reconnect_delay = 20000;
+			stompClient.connect(headers,
+				function connectCallback(frame) {
+					//if(isConnected) return;
+					setConnected(true);
+					var sessionId = /\/([^\/]+)\/websocket/.exec(socket._transport.url)[1];
+					console.log('Connected: ' + frame);
+					console.log('====================: ');
+					console.log('socket: ' + JSON.stringify(socket));
+					console.log('stompClient: ' + JSON.stringify(stompClient));
+					console.log('sessionId: ' + sessionId);
+					stompClient.subscribe('/topic/chebaba', function(
+							msg) {
+						//showGreeting(JSON.parse(greeting.body).content);
+						notifyBox('Test',
+								'https://www.chebaba.com/favicon.ico',
+								JSON.parse(msg.body).responseMsg,
+								'https://www.chebaba.com');
+					});
+					stompClient.subscribe('/user/' + sessionId + '/msg', function(
+							msg) {
+						//showGreeting(JSON.parse(greeting.body).content);
+						notifyBox('Test',
+								'https://www.chebaba.com/favicon.ico',
+								JSON.parse(msg.body).responseMsg,
+								'https://www.chebaba.com');
+					});
+				},
+		        function errorCallBack(error) {
+		            // 连接失败时（服务器响应 ERROR 帧）的回调方法
+		            isConnected = false;
+					console.log('Connected error.【' + error + '】');
+					for(var i = 0; i < 2; i++) {
+				    console.log('STOMP: Reconecting in 10 seconds');
+					setTimeout(connect, 10000);
+					}
+		        });
+		}
+
+		function disconnect() {
+			if (stompClient != null) {
+				stompClient.disconnect();
+			}
+			setConnected(false);
+			console.log("Disconnected");
+		}
+
+		function sendName() {
+			var name = document.getElementById('name').value;
+			stompClient.send("/app/hello", {}, JSON.stringify({
+				'name' : name
+			}));
+		}
+
+		function showGreeting(message) {
+			var response = document.getElementById('response');
+			var p = document.createElement('p');
+			p.style.wordWrap = 'break-word';
+			p.appendChild(document.createTextNode(message));
+			response.appendChild(p);
+		}
+	</script>
+</head>
+<body onload="disconnect()">
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <label>What is your name?</label><input type="text" id="name" />
+        <button id="sendName" onclick="sendName();">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+</body>
+</html>
